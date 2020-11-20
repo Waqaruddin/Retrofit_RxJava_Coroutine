@@ -1,26 +1,29 @@
-package com.example.rxjavawithretrofit
+package com.example.rxjavawithretrofit.coroutines
+
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.row_adapter_users.view.*
+import com.example.rxjavawithretrofit.R
+import com.example.rxjavawithretrofit.model.Users
+import kotlinx.android.synthetic.main.row_adapter_users.view.text_view_name
 
 
-class UsersAdapter(var mContext: Context, var mList:ArrayList<Users>):RecyclerView.Adapter<UsersAdapter.MyViewHolder>(){
+class UsersAdapter2(var mContext: Context, var mList:ArrayList<Users>):RecyclerView.Adapter<UsersAdapter2.MyViewHolder>(){
 
 
     inner class MyViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
 
-        fun bind(users:Users){
+        fun bind(users: Users){
 
             itemView.text_view_name.text = users.name
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        var view = LayoutInflater.from(mContext).inflate(R.layout.row_adapter_users, parent, false)
+        var view = LayoutInflater.from(mContext).inflate(R.layout.row_adapter_coroutines, parent, false)
         return MyViewHolder(view)
     }
 

@@ -1,15 +1,13 @@
-package com.example.rxjavawithretrofit
+package com.example.rxjavawithretrofit.rxjava
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.rxjavawithretrofit.MyViewModel
+import com.example.rxjavawithretrofit.R
+import com.example.rxjavawithretrofit.model.Users
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers.IO
-import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 

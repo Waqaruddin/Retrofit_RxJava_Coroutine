@@ -1,9 +1,9 @@
-package com.example.rxjavawithretrofit
+package com.example.rxjavawithretrofit.model
 
 data class UsersResponse(
-    val count: Int,
-    val data: ArrayList<Users>,
-    val error: Boolean
+        val count: Int,
+        val data: ArrayList<Users>,
+        val error: Boolean
 )
 
 data class Users(

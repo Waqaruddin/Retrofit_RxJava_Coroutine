@@ -1,4 +1,4 @@
-package com.example.rxjavawithretrofit
+package com.example.rxjavawithretrofit.model
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -6,10 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.schedulers.Schedulers
-import okhttp3.ResponseBody
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class MyRespository{
     fun getUsers(): LiveData<ArrayList<Users>>{
