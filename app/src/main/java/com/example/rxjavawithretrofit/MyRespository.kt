@@ -12,9 +12,9 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class MyRespository{
-    fun getUsers(): LiveData<UsersResponse>{
+    fun getUsers(): LiveData<ArrayList<Users>>{
 
-        var users = MutableLiveData<UsersResponse>()
+        var users = MutableLiveData<ArrayList<Users>>()
 
         MyApi().getUsers()
             .subscribeOn(Schedulers.io())
@@ -22,7 +22,7 @@ class MyRespository{
             .subscribeWith(object : DisposableSingleObserver<UsersResponse>(){
                 override fun onSuccess(t: UsersResponse) {
                     Log.d("abc", t.data[0].name)
-                    users.value = t
+                    users.value = t.data
                 }
 
                 override fun onError(e: Throwable) {

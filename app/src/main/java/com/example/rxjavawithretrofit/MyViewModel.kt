@@ -10,7 +10,7 @@ import kotlinx.coroutines.Dispatchers
 
 class MyViewModel :ViewModel(){
 
-    fun getUsers():LiveData<UsersResponse>{
+    fun getUsers():LiveData<ArrayList<Users>>{
 
         //Log.d("vm", userResponse.toString())
 
